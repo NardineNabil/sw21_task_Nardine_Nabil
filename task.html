@@ -30,12 +30,14 @@
 <h2>Change Text Color</h2>
   <input type="text" id="colorinputtext">
   <input type="button" id="colorButton"value="change color" onclick="changeColor()"><br><br>
+
 <h2>Enter Start Date</h2>
-	<input type="text" id="startmonth" placeholder="Month">
+  <input type="text" id="startmonth" placeholder="Month">
  <input type="text" id="startday" placeholder="Day">
  <input type="text" id="startyear" placeholder="Year">
  <input type="text" id="starthour" placeholder="Hour">
  <input type="text" id="startmin" placeholder="Min">
+
  <input type="button" value="Submit">
  <p id="timer_value"></p><br>
 <h2>Enter End Date</h2>
@@ -45,14 +47,15 @@
  <input type="text" id="endyear" placeholder="Year">
  <input type="text" id="endhour" placeholder="Hour">
  <input type="text" id="endmin" placeholder="Min">
+
  <input type="button" value="Submit" onclick="settimer();">
  <p id="timer_value"></p>
 
   </div>
   <script type="text/javascript">
-	
+  
 
-	
+  
 var timer;
 function settimer()
 {
@@ -85,7 +88,7 @@ function settimer()
  var minute = second * 60; // Total Sec In One Min
  var hour = minute * 60; // Total Min In One Hour
  var day = hour * 24; // Total Hour In One Day
-}
+
  function showtimer() {
   var remain = end - start; // Get The Difference Between Current and entered date time
   if(remain < 0) 
@@ -104,10 +107,12 @@ function settimer()
   document.getElementById("timer_value").innerHTML += minutes + 'Mins ';
   document.getElementById("timer_value").innerHTML += seconds + 'Secs';
  }
- timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
+  timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
+
+}
+
 
 content=document.querySelector('div');
-
 
 function changeColor() {
 	// body
